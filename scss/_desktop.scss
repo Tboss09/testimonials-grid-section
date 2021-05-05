@@ -1,4 +1,26 @@
-@media screen and (min-width: 1000px) {
+@media screen and(max-width:500px) {
+  .container {
+    &-card {
+      &:nth-of-type(4) {
+        order: -2;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .container {
+    &-card {
+      
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        order: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
   .container {
     width: 86vw;
     justify-content: flex-start;
@@ -6,7 +28,13 @@
 
     &-card {
       width: 100vw;
-
+      .img {
+        &::after {
+          padding: 1px;
+          height: 2.4em !important;
+          width: 2.4em !important;
+        }
+      }
       .card {
         &-remark__bold {
           h2 {
@@ -57,6 +85,24 @@
           width: 75%;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1034px) and (max-width: 1060px) {
+  .container-card {
+    &:nth-of-type(4),
+    &:nth-of-type(3) {
+      transform: translateY(0vh) !important;
+    }
+  }
+}
+
+@media screen and(min-width:1300px) and(max-width:1350px) {
+  .container-card {
+    &:nth-of-type(4),
+    &:nth-of-type(3) {
+      transform: translateY(-30vh);
     }
   }
 }
