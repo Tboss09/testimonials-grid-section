@@ -15,3 +15,8 @@
 .DS_Store
 
 .prettierignore
+style-guide.md
+design
+public
+.vscode
+scss
