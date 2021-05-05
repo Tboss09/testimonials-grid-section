@@ -1,0 +1,18 @@
+$color: (
+  'violet': hsl(263, 55%, 52%),
+  'darkGrey': hsl(217, 19%, 35%),
+  'white': hsl(0, 0%, 100%),
+  'darkBlue': hsl(219, 29%, 14%),
+  'lightGray': hsl(0, 0%, 81%),
+  'lightBlue': hsl(210, 46%, 95%),
+);
+
+@function colorz($colorName) {
+  @return map-get($color, $colorName);
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}

@@ -1,0 +1,119 @@
+@import './reset';
+@import './config';
+.body {
+  background: #edf2f8;
+}
+.container {
+  height: 100%;
+  width: 90vw;
+  margin: 10vh auto 5vh auto;
+  @include flex(center, center);
+  flex-wrap: wrap;
+  & > &-card {
+    background: lightblue;
+    z-index: 400;
+    margin: 0.65em;
+    flex: 1 1 250px;
+    max-width: 85%;
+    padding: 1em;
+  }
+  .card {
+    padding-bottom: 2em;
+    border-radius: 5px;
+
+    &:nth-of-type(1) {
+      background: colorz('violet');
+    }
+
+    &:nth-of-type(2) {
+      background: colorz('darkGrey');
+    }
+    &:nth-of-type(4) {
+      background: colorz('darkBlue');
+    }
+    &:nth-of-type(3),
+    &:nth-of-type(5) {
+      background: colorz('white');
+      box-shadow: 9px 9px 17px -1px rgba(17, 17, 17, 0.082);
+      .text {
+        color: colorz('darkBlue');
+      }
+      .card-remark__bold {
+        color: colorz('darkGrey');
+      }
+      .card-remark__light {
+        p {
+          color: colorz('darkGrey');
+        }
+      }
+    }
+
+    &-profile {
+      height: 3.5em;
+      @include flex(flex-start, center);
+      font-size: 1rem;
+      padding: 0.5em;
+      position: relative;
+      .img {
+        @include flex(center, center);
+        &::after {
+          position: absolute;
+          content: '';
+          border-radius: 50%;
+          background: #ffffff7a;
+          top: 2vh;
+          padding: 0.6px;
+          height: 2.5em;
+          width: 2.5em;
+          // left: 5%;
+          z-index: -1;
+        }
+        width: 2.2em;
+        height: 2.2em;
+        img {
+          z-index: 100;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .text {
+        padding-left: 1em;
+        color: colorz('lightGray');
+        h1 {
+          font-weight: 600;
+          line-height: 1.5em;
+        }
+        p {
+          opacity: 0.5;
+          font-size: 0.9rem;
+          font-weight: 600;
+          white-space: nowrap;
+        }
+      }
+    }
+    &-remark__bold {
+      color: colorz('white');
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.4em;
+        max-width: 88%;
+        padding: 1em 0.5em;
+      }
+      p {
+        opacity: 0.7;
+      }
+    }
+    &-remark__light {
+      p {
+        opacity: 0.5;
+        line-height: 1.4em;
+        width: 95%;
+        color: colorz('white');
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@import './desktop';
