@@ -97,11 +97,14 @@
   }
 }
 
-@media screen and(min-width:1300px) and(max-width:1350px) {
+@media screen and(min-width:1280px) and(max-width:1390px) {
   .container-card {
     &:nth-of-type(4),
     &:nth-of-type(3) {
-      transform: translateY(-30vh);
+      transform: translateY(-33vh);
+    }
+    &:nth-of-type(5){
+      margin-right: 5vh;
     }
   }
 }

@@ -1,12 +1,12 @@
 @import './reset';
 @import './config';
-.body {
-  background: #edf2f8;
+body {
+  background: #EDF2F8;
 }
 .container {
   height: 100%;
   width: 90vw;
-  margin: 2vh auto 5vh auto;
+  margin: 2vh auto 2vh auto;
   @include flex(center, center);
   flex-wrap: wrap;
   & > &-card {
